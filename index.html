@@ -70,9 +70,10 @@
 	}
 	function skip(){
 		console.log("Skip Ahead");
-		vid.currentTime += 15;
-		if (vid.ended == true){
-			vid.currentTime = 0;
+		if (vid.currentTime < vid.duration){
+			vid.currentTime += 15;
+		}
+		else{
 			vid.play();
 		}
 	}
