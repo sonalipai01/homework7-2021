@@ -37,8 +37,8 @@
 	<label for="slider">Volume</label>: 0 <input type="range" id="slider" min="0" max="100" value="100" step="10"> 100%<br>
 	<div>Volume is: <span id = "volume"> </span><br><br></div>
 
-	<button id = "vintage">Old School</button>
-	<button id = "orig">Original</button>
+	<button onclick = "oldSchool()" id = "vintage">Old School</button>
+	<button onclick = "original()" id = "orig">Original</button>
 
 	<p>Video courtesy of Allison Sweet.</p>
 
@@ -52,7 +52,7 @@
 	function play(){
 		console.log("Play Video");
 		vid.play();
-		vidVolume.innerHTML = vid.volume * 100;
+		vidVolume.innerHTML = vid.volume * 100 + "%"
 	}
 	function pause() { 
 		console.log("Pause Video");
@@ -90,6 +90,12 @@
 		var x = volSlider.value / 100;
 		vid.volume = x;
 		//make sure to update volume everywhere
+	}
+	function oldSchool(){
+		vid.classList.add("oldSchool");
+	}
+	function original(){
+		vid.classList.remove("oldSchool");
 	}
 
 </script>
