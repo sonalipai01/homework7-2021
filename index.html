@@ -87,14 +87,10 @@
 			muted.innerHTML = "Mute";
 		}
 	}
-	function slider(){
-		var x = volSlider.value / 100;
-		vid.volume = x;
-		//make sure to update volume everywhere
-	}
 	volSlider.addEventListener('change', function(){
 		vid.volume = volSlider.value / 100;
 		vidVolume = vid.volume * 100 + "%";
+	});
 	function oldSchool(){
 		vid.classList.add("oldSchool");
 	}
