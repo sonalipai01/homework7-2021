@@ -87,17 +87,17 @@
 			muted.innerHTML = "Mute";
 		}
 	}
-	volSlider.addEventListener('change', function(){
-		vid.volume = volSlider.value / 100;
-		vidVolume = vid.volume * 100 + "%";
-	});
+
 	function oldSchool(){
 		vid.classList.add("oldSchool");
 	}
 	function original(){
 		vid.classList.remove("oldSchool");
 	}
-
+	volSlider.addEventListener('change', function(){
+		vid.volume = volSlider.value / 100;
+		vidVolume = vid.volume * 100 + "%";
+	});
 </script>
 </body> 
 </html>
