@@ -96,7 +96,7 @@
 	}
 	volSlider.addEventListener('change', function(){
 		vid.volume = volSlider.value / 100;
-		vidVolume = vid.volume * 100 + "%";
+		vidVolume.innerHTML = vid.volume * 100 + "%";
 	});
 </script>
 </body> 
