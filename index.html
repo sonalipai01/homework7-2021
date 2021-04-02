@@ -70,7 +70,7 @@
 	}
 	function skip(){
 		console.log("Skip Ahead");
-		if (vid.currentTime < vid.duration){
+		if (vid.currentTime < vid.duration - 15){
 			vid.currentTime += 15;
 		}
 		else{
@@ -92,6 +92,9 @@
 		vid.volume = x;
 		//make sure to update volume everywhere
 	}
+	volSlider.addEventListener('change', function(){
+		vid.volume = volSlider.value / 100;
+		vidVolume = vid.volume * 100 + "%";
 	function oldSchool(){
 		vid.classList.add("oldSchool");
 	}
